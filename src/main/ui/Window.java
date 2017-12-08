@@ -43,8 +43,8 @@ public class Window extends JFrame {
         setVisible(true);
     }
 
-    public void update() {
-        test.setText("Hello");
+    public void update(String newText) {
+        test.setText(newText);
         validate();
     }
 

@@ -1,1 +1,1 @@
-Hello friends. Changed text!
+Hello friends! You can change this text without recompiling!

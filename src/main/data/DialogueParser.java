@@ -15,27 +15,34 @@ public class DialogueParser {
 
     public static final String BASE_URL = "resources/dialogue/";
 
-    public static void load(String filePath) {
+    public static String load(String filePath) {
         File file = new File(BASE_URL + filePath);
         try {
             FileInputStream fis = new FileInputStream(file);
 
             StringBuffer result = new StringBuffer();
             int content = 0;
-            do {
-                content = fis.read();
+            while ((content = fis.read()) != -1) {
                 result.append((char) content);
-            } while (content != -1);
+            }
 
-            Application.getGameData().newValue(result.toString().trim());
-            new GameEvent().run("replaceText");
-
+            return result.toString().trim();
         } catch (FileNotFoundException e) {
             System.out.println("sad, no file at " + filePath + " or at " + file.getAbsolutePath());
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return "";
+    }
 
+    public static void changeDisplayText(String value) {
+        Application.getGameData().newValue(value);
+        new GameEvent().run("replaceText");
+    }
+
+    public static void runScript(String script) {
+        //Json
+        new GameEvent().run(script);
     }
 
 }

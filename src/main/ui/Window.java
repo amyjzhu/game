@@ -46,10 +46,22 @@ public class Window extends JFrame {
         click.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DialogueParser.load("simple.txt");
+                String newVal = DialogueParser.load("simple.txt");
+                DialogueParser.changeDisplayText(newVal);
             }
         });
         mainPane.add(click);
+
+        JButton click2 = new JButton();
+        click2.setText("Click me to do whatever is specified in load.txt!");
+        click2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String newVal = DialogueParser.load("load.txt");
+                DialogueParser.runScript(newVal);
+            }
+        });
+        mainPane.add(click2);
 
         getContentPane().add(mainPane);
         pack();

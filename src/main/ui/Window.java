@@ -1,7 +1,7 @@
 package main.ui;
 
 
-import main.model.events.GameEvent;
+import main.data.DialogueParser;
 
 import javax.swing.*;
 import java.awt.*;
@@ -46,7 +46,7 @@ public class Window extends JFrame {
         click.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new GameEvent().run("updateToText");
+                DialogueParser.load("simple.txt");
             }
         });
         mainPane.add(click);

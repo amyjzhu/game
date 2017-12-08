@@ -22,6 +22,7 @@ public class GameEvent {
         eventsMap = new HashMap<>();
         eventsMap.put("update",() -> Application.getGameData().newValue(Integer.toString(Day.getDay())));
         eventsMap.put("updateToText", () -> {Application.getGameData().newValue("Hey!"); Application.update();}); // not sure how to add params at this moment... maybe check a params thing? hm
+        eventsMap.put("replaceText", () -> Application.update());
     }
 
     public void run(String animationTitle) {

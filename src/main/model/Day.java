@@ -1,6 +1,7 @@
 package main.model;
 
 import main.Application;
+import main.model.events.GameEvent;
 
 /**
  * Created by gijin on 2017-12-06.
@@ -25,9 +26,13 @@ public class Day {
         getInstance().runDay();
     }
 
-
     public void runDay() {
-        Application.getGameData().newValue(Integer.toString(today++));
+        new GameEvent().run("update");
         Application.update();
+        today++;
+    }
+
+    public static int getDay() {
+        return today;
     }
 }

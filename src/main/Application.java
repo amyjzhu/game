@@ -25,7 +25,6 @@ public class Application {
     public static void update() {
         String text = data.getNew();
         mainWindow.update(text);
-
     }
 
     public static GameData getGameData() {

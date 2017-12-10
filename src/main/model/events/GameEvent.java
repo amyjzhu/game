@@ -20,6 +20,8 @@ public class GameEvent {
     Map<String, Animation> eventsMap;
 
     public GameEvent() {
+        // wrap in runWithArguments and use a hash map specifying the argument types in an array
+        // uhhh then use reflection to invoke the named method
         eventsMap = new HashMap<>();
         eventsMap.put("update",(args) -> Application.getGameData().newValue(Integer.toString(Day.getDay())));
         eventsMap.put("updateToText", (args) -> {Application.getGameData().newValue("Hey!"); Application.update();}); // not sure how to add params at this moment... maybe check a params thing? hm

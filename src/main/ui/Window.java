@@ -63,6 +63,9 @@ public class Window extends JFrame {
         });
         mainPane.add(click2);
 
+        JPanel pic = new ImageAsset("aigis.png");
+        mainPane.add(pic);
+
         getContentPane().add(mainPane);
         pack();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

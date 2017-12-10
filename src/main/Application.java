@@ -27,6 +27,7 @@ public class Application {
         mainWindow.update(text);
     }
 
+    // eliminate this weird dependency
     public static GameData getGameData() {
         return data;
     }

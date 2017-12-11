@@ -2,6 +2,7 @@ package main.ui;
 
 
 import main.data.DialogueParser;
+import main.ui.layer.BackgroundLayer;
 import main.ui.layer.CharacterLayer;
 import main.ui.layer.TextLayer;
 
@@ -24,17 +25,17 @@ public class Window extends JFrame {
 
     public void init() {
         getContentPane().setLayout(new OverlayLayout(getContentPane()));
-        this.setMinimumSize(new Dimension(500,500));
+        this.setMinimumSize(new Dimension(1000,1000));
         textPane = new TextLayer();
         JLayeredPane mainPane = new JLayeredPane();
 
         CharacterLayer characterLayer = new CharacterLayer();
-        mainPane.add(characterLayer, new Integer(0)); // decide on formal systme
-
+        mainPane.add(characterLayer, new Integer(10)); // decide on formal systme
+        mainPane.setOpaque(false);
         mainPane.setLayout(new OverlayLayout(mainPane));
         mainPane.setBackground(Color.BLACK);
 
-        mainPane.add(textPane,new Integer(10));
+        mainPane.add(textPane,new Integer(20));
 
         JButton click = new JButton();
         click.setText("Click me for new text");
@@ -46,6 +47,9 @@ public class Window extends JFrame {
             }
         });
         mainPane.add(click, new Integer(15));
+
+        BackgroundLayer background = new BackgroundLayer("test.png");
+        mainPane.add(background, new Integer(0));
 
         getContentPane().add(mainPane);
         pack();

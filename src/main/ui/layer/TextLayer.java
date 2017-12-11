@@ -15,10 +15,19 @@ public class TextLayer extends Layer {
         nameText = new JLabel();
         nameText.setText("Test");
         nameText.setBackground(Color.PINK);
+        nameText.setOpaque(true);
 
-        this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
+        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.add(Box.createRigidArea(new Dimension(600,700)));
         this.add(Box.createVerticalGlue());
         this.add(nameText);
+        this.setBackground(Color.WHITE);
+        int width = this.getWidth();
+        this.setOpaque(false);
+        nameText.setPreferredSize(new Dimension(width,100));
+    }
+
+    public void updateText(String text) {
+        nameText.setText(text);
     }
 }

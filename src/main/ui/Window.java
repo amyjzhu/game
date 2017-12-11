@@ -2,6 +2,7 @@ package main.ui;
 
 
 import main.data.DialogueParser;
+import main.ui.layer.CharacterLayer;
 import main.ui.layer.TextLayer;
 
 import javax.swing.*;
@@ -14,7 +15,7 @@ import java.awt.event.ActionListener;
  */
 public class Window extends JFrame {
 
-    JPanel textPane;
+    TextLayer textPane;
     JLabel test;
 
     public Window() {
@@ -25,12 +26,15 @@ public class Window extends JFrame {
         getContentPane().setLayout(new OverlayLayout(getContentPane()));
         this.setMinimumSize(new Dimension(500,500));
         textPane = new TextLayer();
-        JPanel mainPane = new JPanel();
+        JLayeredPane mainPane = new JLayeredPane();
+
+        CharacterLayer characterLayer = new CharacterLayer();
+        mainPane.add(characterLayer, new Integer(0)); // decide on formal systme
 
         mainPane.setLayout(new OverlayLayout(mainPane));
-        mainPane.setBackground(Color.WHITE);
+        mainPane.setBackground(Color.BLACK);
 
-        mainPane.add(textPane);
+        mainPane.add(textPane,new Integer(10));
 
         JButton click = new JButton();
         click.setText("Click me for new text");
@@ -41,14 +45,14 @@ public class Window extends JFrame {
                 DialogueParser.changeDisplayText(newVal);
             }
         });
-        mainPane.add(click);
+        mainPane.add(click, new Integer(15));
 
         getContentPane().add(mainPane);
         pack();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
-
+/*
     public void textInit() {
 
         getContentPane().setLayout(new OverlayLayout(getContentPane()));
@@ -101,9 +105,10 @@ public class Window extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
-
+*/
     public void update(String newText) {
-        test.setText(newText);
+        //test.setText(newText);
+        textPane.updateText(newText);
         validate();
     }
 

@@ -18,5 +18,6 @@ public class ImageAsset extends JPanel {
         JLabel label = new JLabel("", imageIcon, JLabel.CENTER);
         this.setLayout(new BorderLayout());
         this.add(label, BorderLayout.CENTER);
+        this.setOpaque(false);
     };
 }

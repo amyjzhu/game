@@ -2,6 +2,7 @@ package main.ui.layer;
 
 import main.ui.ImageAsset;
 
+import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 
@@ -14,9 +15,18 @@ public class CharacterLayer extends Layer {
 
     public CharacterLayer() {
         ImageAsset aigis = new ImageAsset("aigis.png");
-        setLayout(new BorderLayout());
-        this.add(aigis, BorderLayout.PAGE_END);
+        JPanel positioner = new JPanel();
+        positioner.setLayout(new BoxLayout(positioner, BoxLayout.X_AXIS));
+        positioner.add(Box.createRigidArea(new Dimension(800, 0))); // get the full height
+        positioner.add(aigis, BorderLayout.PAGE_END);
+        positioner.add(Box.createHorizontalGlue());
+        positioner.setAlignmentY(Component.BOTTOM_ALIGNMENT);
+        aigis.setAlignmentY(Component.BOTTOM_ALIGNMENT);
+        positioner.setOpaque(false);
+
         this.setOpaque(false);
+        this.setLayout(new BorderLayout());
+        this.add(positioner, BorderLayout.SOUTH);
     }
 
 }

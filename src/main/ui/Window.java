@@ -30,6 +30,7 @@ public class Window extends JFrame {
         JLayeredPane mainPane = new JLayeredPane();
 
         CharacterLayer characterLayer = new CharacterLayer();
+        characterLayer.setAlignmentY(Component.BOTTOM_ALIGNMENT);
         mainPane.add(characterLayer, new Integer(10)); // decide on formal systme
         mainPane.setOpaque(false);
         mainPane.setLayout(new OverlayLayout(mainPane));

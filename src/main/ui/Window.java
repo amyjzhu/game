@@ -2,7 +2,6 @@ package main.ui;
 
 
 import main.data.DialogueParser;
-import main.ui.layer.BackgroundLayer;
 import main.ui.layer.CharacterLayer;
 import main.ui.layer.TextLayer;
 
@@ -32,6 +31,7 @@ public class Window extends JFrame {
         CharacterLayer characterLayer = new CharacterLayer();
         characterLayer.setAlignmentY(Component.BOTTOM_ALIGNMENT);
         mainPane.add(characterLayer, new Integer(10)); // decide on formal systme
+
         mainPane.setOpaque(false);
         mainPane.setLayout(new OverlayLayout(mainPane));
         mainPane.setBackground(Color.BLACK);

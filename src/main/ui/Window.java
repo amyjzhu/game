@@ -2,6 +2,7 @@ package main.ui;
 
 
 import main.data.DialogueParser;
+import main.ui.layer.BackgroundLayer;
 import main.ui.layer.CharacterLayer;
 import main.ui.layer.TextLayer;
 
@@ -48,6 +49,16 @@ public class Window extends JFrame {
             }
         });
         mainPane.add(click, new Integer(15));
+
+        JButton click2 = new JButton();
+        click2.setText("Click me for new character");
+        click2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                characterLayer.addCharacter("thanks_2.png");
+            }
+        });
+        mainPane.add(click2, new Integer(15));
 
         BackgroundLayer background = new BackgroundLayer("test.png");
         mainPane.add(background, new Integer(0));

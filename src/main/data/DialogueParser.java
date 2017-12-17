@@ -45,4 +45,9 @@ public class DialogueParser {
         new GameEvent().run(script);
     }
 
+    public static void loadEvent(String line) {
+        // hmmm..
+        GameEvent.class.getMethods();
+    }
+
 }

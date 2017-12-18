@@ -3,15 +3,44 @@ package main.data;
 import main.Application;
 import main.model.events.GameEvent;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * Created by gijin on 2017-12-06.
  */
 public class DialogueParser {
+
+    // populate game data from a file
+    //
+
+    public static GameEvent createEvent() {
+        // read each line and parse into an action
+        // choices into fork
+        // conversation is full actions sequence 
+
+        GameEvent event = new GameEvent();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(""))) {
+            String line = br.readLine();
+            // GSON?
+
+        } catch (FileNotFoundException e) {
+
+        } catch (IOException e) {
+
+        }
+
+        return event;
+    }
+
+
+
+
+
+
+
+
+    // ===================================
 
     public static final String BASE_URL = "resources/dialogue/";
 

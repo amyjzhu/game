@@ -15,6 +15,7 @@ public class Reflection {
 
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {
         // take in the name
+        //Class[] params = new Class[]{Integer.TYPE, Integer.TYPE};
         Class[] params = new Class[]{Integer.TYPE, Integer.TYPE};
         eventsToArguments = new HashMap<>();
         eventsToArguments.put("add", params);

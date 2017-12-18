@@ -17,6 +17,12 @@ public class GameData {
         FOCUSED;
 
     }
+
+    public enum StatsTypes {
+        INTELLIGENCE,
+        AFFECTION
+    }
+
     private class Statistics {
 
     }

@@ -26,7 +26,10 @@ public class Reflection {
         Object ret = m.invoke(inst, argus);
         System.out.println(ret.toString());
 
+        Functions.printTypes();
     }
+
+    // need two classes to handle stats and
 
 
     public int add(int a, int b) {

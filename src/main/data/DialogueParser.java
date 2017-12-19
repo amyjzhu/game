@@ -1,9 +1,13 @@
 package main.data;
 
 import main.Application;
+import main.model.events.Action;
 import main.model.events.GameEvent;
 
 import java.io.*;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by gijin on 2017-12-06.
@@ -16,13 +20,21 @@ public class DialogueParser {
     public static GameEvent createEvent() {
         // read each line and parse into an action
         // choices into fork
-        // conversation is full actions sequence 
+        // conversation is full actions sequence
 
         GameEvent event = new GameEvent();
+        List<Action> actions = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(""))) {
             String line = br.readLine();
             // GSON?
+            Action action;
+            String type;
+            if (type.equals("text")) {
+                Method m = Reflection.getMethod(type);
+                action = new Action(m);
+                actions.add(action);
+            }
 
         } catch (FileNotFoundException e) {
 

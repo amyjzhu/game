@@ -36,4 +36,21 @@ public class Reflection {
     public int add(int a, int b) {
         return a + b;
     }
+
+
+    // functional interface loaded with arguments already?
+    public static Method getMethod(String methodName) {
+        Method m;
+        Class theClass = null;
+        try {
+            theClass = Class.forName("main.data.Reflection");
+            Class[] params = eventsToArguments.get(methodName);
+            m = theClass.getMethod(methodName, params);
+            Object inst = theClass.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return m;
+    }
 }

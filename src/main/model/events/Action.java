@@ -8,6 +8,7 @@ import java.lang.reflect.Method;
 public class Action {
 
     private Method call;
+    private Object[] args;
 
     public Action(Method call) {
         this.call = call;

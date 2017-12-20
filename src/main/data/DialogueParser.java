@@ -30,6 +30,7 @@ public class DialogueParser {
             // GSON?
             Action action;
             String type;
+
             if (type.equals("text")) {
                 Method m = Reflection.getMethod(type);
                 action = new Action(m);

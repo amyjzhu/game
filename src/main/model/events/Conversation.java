@@ -7,7 +7,6 @@ import java.util.List;
  */
 public class Conversation {
 
-    boolean isEnd;
     List<Action> actionsToPlay;
     List<Fork> choices;
     

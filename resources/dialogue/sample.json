@@ -1,5 +1,1 @@
-{
-  "action":"replaceText",
-  "idea": "Include dialogue with different information.",
-  "stats": "think more about how to structure it when you consider the effect of different stats."
-}
+{"title":"Sample_Event","description":"Amy sits on the bus and writes this sample event","script":[{"text":"Hello"},{"text":"Sure is snowing out there"},{"action":"switchCharacter","arguments":["Amy","openLaptop.png"]},{"text":"Oh, do you want to see what I'm working on?"}],"character":"Amy","priority":"0","type":"Everyday","prerequisites":"","choices":[{"Forward":"Amy-01-Show_Work"},{"Reserved":"Amy-01-Continue_Chatting"},{"...":"Amy-01-Confused"}]}

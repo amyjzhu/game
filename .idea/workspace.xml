@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="566fc0ec-b30e-40f0-a207-26c80230e5f1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/data/DialogueParser.java" afterPath="$PROJECT_DIR$/src/main/data/DialogueParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/model/events/Action.java" afterPath="$PROJECT_DIR$/src/main/model/events/Action.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/model/events/Conversation.java" afterPath="$PROJECT_DIR$/src/main/model/events/Conversation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/dialogue/sample.json" afterPath="$PROJECT_DIR$/resources/dialogue/sample.json" />
     </list>
     <ignored path="potential game thing.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,22 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file leaf-file-name="Window.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/ui/Window.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#418#419#0" expanded="true" />
-                <element signature="e#440#441#0" expanded="true" />
-                <element signature="e#1729#1730#0" expanded="true" />
-                <element signature="e#1804#1805#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CharacterLayer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/ui/layer/CharacterLayer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -96,11 +78,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameEvent.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameEvent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/model/events/GameEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47553816">
+            <state vertical-scroll-proportion="0.0">
               <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sample.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/dialogue/sample.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="454" selection-start-line="0" selection-start-column="454" selection-end-line="0" selection-end-column="454" />
               <folding />
             </state>
           </provider>
@@ -215,7 +207,6 @@
         <option value="$PROJECT_DIR$/src/main/model/Day.java" />
         <option value="$PROJECT_DIR$/src/main/model/events/Event.java" />
         <option value="$PROJECT_DIR$/resources/dialogue/simple.json" />
-        <option value="$PROJECT_DIR$/resources/dialogue/sample.json" />
         <option value="$PROJECT_DIR$/resources/dialogue/load.txt" />
         <option value="$PROJECT_DIR$/resources/dialogue/simple.txt" />
         <option value="$PROJECT_DIR$/src/main/model/events/GameEvent.java" />
@@ -234,6 +225,7 @@
         <option value="$PROJECT_DIR$/src/main/data/DialogueParser.java" />
         <option value="$PROJECT_DIR$/src/main/model/events/Action.java" />
         <option value="$PROJECT_DIR$/src/main/model/events/Conversation.java" />
+        <option value="$PROJECT_DIR$/resources/dialogue/sample.json" />
       </list>
     </option>
   </component>
@@ -1131,13 +1123,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/dialogue/sample.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.75">
-          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/dialogue/load.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1368,8 +1353,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/model/events/GameEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47553816">
+        <state vertical-scroll-proportion="0.0">
           <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/dialogue/sample.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="454" selection-start-line="0" selection-start-column="454" selection-end-line="0" selection-end-column="454" />
           <folding />
         </state>
       </provider>

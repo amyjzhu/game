@@ -2,6 +2,7 @@ package main.data;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,7 +41,7 @@ public class Reflection {
 
     // functional interface loaded with arguments already?
     public static Method getMethod(String methodName) {
-        Method m;
+        Method m = null;
         Class theClass = null;
         try {
             theClass = Class.forName("main.data.Reflection");
@@ -52,5 +53,18 @@ public class Reflection {
         }
 
         return m;
+    }
+
+    public static Class[] getArgumenTypess(String[] types) {
+        return Arrays.stream(types).map(Reflection::getClass).toArray(Class[]::new);
+    }
+
+    private static Class getClass(String name) {
+        // lmao check this out
+        try {
+            return Class.forName(name);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException("Is there really a class for the name " + name +"?");
+        }
     }
 }

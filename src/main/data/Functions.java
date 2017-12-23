@@ -46,6 +46,7 @@ public class Functions {
         );
         // how can I translate a list of types to types?
         // hmm... https://stackoverflow.com/questions/2408789/getting-class-type-from-string I guess
+        // for now I'll just use their class names.
 
         System.out.println(haha.toString());
     }

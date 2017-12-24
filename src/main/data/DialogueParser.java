@@ -1,5 +1,6 @@
 package main.data;
 
+import com.google.gson.Gson;
 import main.Application;
 import main.model.events.Action;
 import main.model.events.GameEvent;
@@ -12,6 +13,7 @@ import java.util.List;
 /**
  * Created by gijin on 2017-12-06.
  */
+
 public class DialogueParser {
 
     // populate game data from a file
@@ -31,6 +33,11 @@ public class DialogueParser {
             Action action;
             String type;
 
+            new Gson().newJsonReader(br);
+
+            type="text"; //want it to compile haha but we should really serialize the
+            // text into objects. how can I get them to reference one another... maybe set it afterwards?
+            // or just do a massive operation at the end - seems better...
             if (type.equals("text")) {
                 Method m = Reflection.getMethod(type);
                 action = new Action(m);

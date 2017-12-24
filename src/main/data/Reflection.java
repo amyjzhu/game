@@ -55,13 +55,16 @@ public class Reflection {
         return m;
     }
 
-    public static Class[] getArgumenTypess(String[] types) {
+    public static Class[] getArgumentTypes(String[] types) {
         return Arrays.stream(types).map(Reflection::getClass).toArray(Class[]::new);
     }
 
     private static Class getClass(String name) {
         // lmao check this out
         try {
+            if (name.startsWith("class")) {
+                name = name.substring(5); // get rid of "class "
+            }
             return Class.forName(name);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException("Is there really a class for the name " + name +"?");

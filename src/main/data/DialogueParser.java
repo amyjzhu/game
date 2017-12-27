@@ -1,14 +1,13 @@
 package main.data;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import main.Application;
 import main.model.events.Action;
 import main.model.events.GameEvent;
+import org.json.JSONObject;
 
 import java.io.*;
 import java.lang.reflect.Method;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,12 +34,22 @@ public class DialogueParser {
             Action action;
             String type;
 
-            new Gson().newJsonReader(br);
-            Type theAction = new TypeToken<>
+            // maybe I don't want to use GSON because I want to write a custome serializer
 
+            new Gson().newJsonReader(br);
+//            Type theAction = new TypeToken<Serialized>();
+
+
+            
             type="text"; //want it to compile haha but we should really serialize the
             // text into objects. how can I get them to reference one another... maybe set it afterwards?
             // or just do a massive operation at the end - seems better...
+
+
+            JSONObject toParse = new JSONObject(type);
+            toParse.get("text");
+
+
             if (type.equals("text")) {
                 Method m = Reflection.getMethod(type);
                 action = new Action(m);

@@ -8,4 +8,6 @@ public class Serialized {
     String type;
     String description;
     String[] relatedTo;
+    // serialize to this then parse...?
+    // should I write my own parser?
 }

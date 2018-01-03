@@ -10,12 +10,15 @@ import java.util.*;
  */
 public class Functions {
 
+    public static String CLASS_NAME = "main.data.Functions";
+
 
     // public static void all the possible functions
     // movements and statistics
     // generate a file that has all the names and argument types
 
     public static void addCharacter() {
+        System.out.println("reached addCharacter!");
 
     }
 
@@ -28,9 +31,9 @@ public class Functions {
     }
 
     public static void printTypes() throws ClassNotFoundException {
-        Class thisClass = Class.forName("main.data.Functions");
+        Class thisClass = Class.forName(CLASS_NAME);
         Method[] methods = thisClass.getMethods();
-        Map<String, String> haha = new HashMap<>();
+        Map<String, String> methodParamMap = new HashMap<>();
         Arrays.stream(methods).forEach(
                 method -> {
                     List<String> paramString = new ArrayList<>();
@@ -40,7 +43,7 @@ public class Functions {
                                 paramString.add(param.toString());
                             }
                     );
-                    haha.put(method.getName(),
+                    methodParamMap.put(method.getName(),
                             paramString.toString());
                 }
         );
@@ -48,6 +51,6 @@ public class Functions {
         // hmm... https://stackoverflow.com/questions/2408789/getting-class-type-from-string I guess
         // for now I'll just use their class names.
 
-        System.out.println(haha.toString());
+        System.out.println(methodParamMap.toString());
     }
 }

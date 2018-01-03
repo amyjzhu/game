@@ -2,9 +2,7 @@ package main.data;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by gijin on 2017-12-17.
@@ -29,10 +27,16 @@ public class Reflection {
         System.out.println(ret.toString());
 
         Functions.printTypes();
+
+        Set<String> argumentNames = new HashSet<>();
+        Method method = getFunctionsMethod("addCharacter");
+        method.invoke(argumentNames);
     }
 
     // need two classes to handle stats and
 
+
+    // what I think should be done is that when this thng is parsed
 
     public int add(int a, int b) {
         return a + b;
@@ -40,11 +44,11 @@ public class Reflection {
 
 
     // functional interface loaded with arguments already?
-    public static Method getMethod(String methodName) {
+    private static Method getMethod(String className, String methodName) {
         Method m = null;
         Class theClass = null;
         try {
-            theClass = Class.forName("main.data.Reflection");
+            theClass = Class.forName(className);
             Class[] params = eventsToArguments.get(methodName);
             m = theClass.getMethod(methodName, params);
             Object inst = theClass.newInstance();
@@ -53,6 +57,15 @@ public class Reflection {
         }
 
         return m;
+    }
+
+    public static Method getReflectionMethod(String method) {
+        return getMethod("main.data.Reflection", method);
+
+    }
+
+    public static Method getFunctionsMethod(String method) {
+        return getMethod(Functions.CLASS_NAME, method);
     }
 
     public static Class[] getArgumentTypes(String[] types) {

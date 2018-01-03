@@ -51,7 +51,7 @@ public class DialogueParser {
 
 
             if (type.equals("text")) {
-                Method m = Reflection.getMethod(type);
+                Method m = Reflection.getReflectionMethod(type);
                 action = new Action(m);
                 actions.add(action);
             }

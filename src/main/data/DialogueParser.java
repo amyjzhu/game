@@ -68,9 +68,10 @@ public class DialogueParser {
                     JSONArray arguments = value.getJSONArray("arguments");
                     List<Object> castArgs = parseArguments(arguments);
                     currentAction = new Action(Reflection.getFunctionsMethod(methodName));
-                    currentAction.setArgs(castArgs); // whoops...
-
+                    currentAction.setArgs(castArgs.toArray()); // whoops...
                 }
+
+                allActions.add(currentAction);
             }
 
 

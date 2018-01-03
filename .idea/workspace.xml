@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="566fc0ec-b30e-40f0-a207-26c80230e5f1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/potential game thing/main/data/Functions.class" afterPath="$PROJECT_DIR$/out/production/potential game thing/main/data/Functions.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/potential game thing/main/data/Reflection.class" afterPath="$PROJECT_DIR$/out/production/potential game thing/main/data/Reflection.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/data/DialogueParser.java" afterPath="$PROJECT_DIR$/src/main/data/DialogueParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/data/Functions.java" afterPath="$PROJECT_DIR$/src/main/data/Functions.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/data/Reflection.java" afterPath="$PROJECT_DIR$/src/main/data/Reflection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/model/Character.java" afterPath="$PROJECT_DIR$/src/main/model/Character.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/model/events/Action.java" afterPath="$PROJECT_DIR$/src/main/model/events/Action.java" />
     </list>
     <ignored path="potential game thing.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,14 +34,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file leaf-file-name="DialogueParser.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DialogueParser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/data/DialogueParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.546169">
+              <caret line="70" column="66" selection-start-line="70" selection-start-column="66" selection-end-line="70" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Character.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/model/Character.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,8 +70,12 @@
         <entry file="file://$PROJECT_DIR$/src/main/model/events/Action.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-              <folding />
+              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+              <folding>
+                <element signature="e#238#239#0" expanded="true" />
+                <element signature="e#280#281#0" expanded="true" />
+                <element signature="e#312#313#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,15 +120,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Reflection.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Reflection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/data/Reflection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.77799606">
-              <caret line="38" column="68" selection-start-line="38" selection-start-column="68" selection-end-line="38" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2057#2058#0" expanded="true" />
-                <element signature="e#2119#2120#0" expanded="true" />
+                <element signature="e#2425#2426#0" expanded="true" />
+                <element signature="e#2487#2488#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,17 +138,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/data/Functions.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TextLayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/ui/layer/TextLayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+              <caret line="25" column="64" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -159,7 +167,6 @@
         <option value="$PROJECT_DIR$/src/main/GameData.java" />
         <option value="$PROJECT_DIR$/src/main/engine/GameData.java" />
         <option value="$PROJECT_DIR$/src/main/filesystem/Save.java" />
-        <option value="$PROJECT_DIR$/src/main/model/Character.java" />
         <option value="$PROJECT_DIR$/src/main/model/Day.java" />
         <option value="$PROJECT_DIR$/src/main/model/events/Event.java" />
         <option value="$PROJECT_DIR$/resources/dialogue/simple.json" />
@@ -176,13 +183,14 @@
         <option value="$PROJECT_DIR$/src/main/ui/Window.java" />
         <option value="$PROJECT_DIR$/src/main/ui/layer/CharacterLayer.java" />
         <option value="$PROJECT_DIR$/src/main/model/GameData.java" />
-        <option value="$PROJECT_DIR$/src/main/model/events/Action.java" />
         <option value="$PROJECT_DIR$/src/main/model/events/Conversation.java" />
         <option value="$PROJECT_DIR$/resources/dialogue/sample.json" />
         <option value="$PROJECT_DIR$/src/main/data/Serialized.java" />
-        <option value="$PROJECT_DIR$/src/main/data/Functions.java" />
-        <option value="$PROJECT_DIR$/src/main/data/DialogueParser.java" />
         <option value="$PROJECT_DIR$/src/main/data/Reflection.java" />
+        <option value="$PROJECT_DIR$/src/main/model/Character.java" />
+        <option value="$PROJECT_DIR$/src/main/data/Functions.java" />
+        <option value="$PROJECT_DIR$/src/main/model/events/Action.java" />
+        <option value="$PROJECT_DIR$/src/main/data/DialogueParser.java" />
       </list>
     </option>
   </component>
@@ -733,7 +741,13 @@
       <option name="project" value="LOCAL" />
       <updated>1514346769644</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Playing more with method invocation">
+      <created>1514947206276</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1514947206277</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -775,7 +789,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="org,json?" />
-    <option name="LAST_COMMIT_MESSAGE" value="org,json?" />
+    <MESSAGE value="Playing more with method invocation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Playing more with method invocation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -787,13 +802,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/data/DialogueParser.java</url>
-          <line>111</line>
+          <line>157</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/data/Functions.java</url>
-          <line>53</line>
+          <line>54</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -998,13 +1013,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/model/Character.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/model/Day.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1154,14 +1162,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/model/events/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/data/Serialized.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1170,32 +1170,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/data/Functions.java">
+    <entry file="file://$PROJECT_DIR$/src/main/model/Character.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/data/DialogueParser.java">
+    <entry file="file://$PROJECT_DIR$/src/main/data/Functions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="25" column="64" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/data/Reflection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77799606">
-          <caret line="38" column="68" selection-start-line="38" selection-start-column="68" selection-end-line="38" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2057#2058#0" expanded="true" />
-            <element signature="e#2119#2120#0" expanded="true" />
+            <element signature="e#2425#2426#0" expanded="true" />
+            <element signature="e#2487#2488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/model/events/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+          <folding>
+            <element signature="e#238#239#0" expanded="true" />
+            <element signature="e#280#281#0" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/data/DialogueParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.546169">
+          <caret line="70" column="66" selection-start-line="70" selection-start-column="66" selection-end-line="70" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

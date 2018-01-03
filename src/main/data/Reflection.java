@@ -37,6 +37,11 @@ public class Reflection {
 
 
     // what I think should be done is that when this thng is parsed
+    // it should be stored as an action (method invocation with parameters)
+    // need to parse the parameters based on a comparison against a list of argument names
+    // Errors thrown up should cause a crash and output where the probem is
+    // because don't want any script errors to make it into real game
+    // Alternately, templates to generate game code...?
 
     public int add(int a, int b) {
         return a + b;

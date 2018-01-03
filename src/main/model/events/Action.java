@@ -10,6 +10,14 @@ public class Action {
     private Method call;
     private Object[] args;
 
+    public Object[] getArgs() {
+        return args;
+    }
+
+    public void setArgs(Object[] args) {
+        this.args = args;
+    }
+
     public Action(Method call) {
         this.call = call;
     }

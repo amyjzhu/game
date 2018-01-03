@@ -1,9 +1,9 @@
 package main.data;
 
-import com.google.gson.Gson;
 import main.Application;
 import main.model.events.Action;
 import main.model.events.GameEvent;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.*;
@@ -33,21 +33,18 @@ public class DialogueParser {
             // GSON?
             Action action;
             String type;
-
-            // maybe I don't want to use GSON because I want to write a custome serializer
-
-            new Gson().newJsonReader(br);
-//            Type theAction = new TypeToken<Serialized>();
-
-
-            
-            type="text"; //want it to compile haha but we should really serialize the
-            // text into objects. how can I get them to reference one another... maybe set it afterwards?
-            // or just do a massive operation at the end - seems better...
+            type="{\"title\":\"Sample_Event\",\"description\":\"Amy sits on the bus and writes this sample event\",\"script\":[{\"text\":\"Hello\"},{\"text\":\"Sure is snowing out there\"},{\"action\":\"switchCharacter\",\"arguments\":[\"Amy\",\"openLaptop.png\"]},{\"text\":\"Oh, do you want to see what I'm working on?\"}],\"character\":\"Amy\",\"priority\":\"0\",\"type\":\"Everyday\",\"prerequisites\":\"\",\"choices\":[{\"Forward\":\"Amy-01-Show_Work\"},{\"Reserved\":\"Amy-01-Continue_Chatting\"},{\"...\":\"Amy-01-Confused\"}]}"; //want it to compile haha but we should really serialize the
 
 
             JSONObject toParse = new JSONObject(type);
-            toParse.get("text");
+            JSONArray scriptEvents = toParse.getJSONArray("script");
+            // for each, if text load up the text
+            // if action grab a function
+
+            // parse the method type and grab the function
+            // get argument list for the method
+            // get argument list and parse into objects
+            // I want to make it extensible...
 
 
             if (type.equals("text")) {
@@ -55,6 +52,27 @@ public class DialogueParser {
                 action = new Action(m);
                 actions.add(action);
             }
+
+            List<Action> allActions = new ArrayList<>();
+
+            for (int i = 0; i < scriptEvents.length(); i++) {
+                JSONObject value = scriptEvents.getJSONObject(i);
+                Action currentAction;
+                try {
+                    String display = value.get("text").toString();
+                    Method displayText = Reflection.getReflectionMethod("skfjdf");
+                    currentAction = new Action(displayText);
+                    currentAction.setArgs(new String[]{display});
+                } catch (Exception e) {
+                    String methodName = value.get("action").toString();
+                    JSONArray arguments = value.getJSONArray("arguments");
+                    List<Object> castArgs = parseArguments(arguments);
+                    currentAction = new Action(Reflection.getFunctionsMethod(methodName));
+                    currentAction.setArgs(castArgs); // whoops...
+
+                }
+            }
+
 
         } catch (FileNotFoundException e) {
 
@@ -65,8 +83,36 @@ public class DialogueParser {
         return event;
     }
 
+    private static List<Object> parseArguments(JSONArray arguments) {
+        List<Object> castArgs = new ArrayList<>();
+        // do something to match up the list of arguments
+        for (int i = 0; i < arguments.length(); i++) {
+            castArgs.add(arguments.get(i));
+        }
+
+        return castArgs;
+    }
 
 
+    private static <T extends Object> T parseArgument(String value, String className) throws ClassNotFoundException {
+        // need special cases for enums
+        // overwrite the cast method for those types
+
+        Class<T> classType = (Class<T>) Class.forName(className);
+        return classType.cast(value);
+    }
+
+
+
+    // maybe I don't want to use GSON because I want to write a custome serializer
+
+    //new Gson().newJsonReader(br);
+//            Type theAction = new TypeToken<Serialized>();
+
+
+
+    // text into objects. how can I get them to reference one another... maybe set it afterwards?
+    // or just do a massive operation at the end - seems better...
 
 
 

@@ -1,5 +1,6 @@
 package main.data;
 
+import main.model.Character;
 import main.model.GameData;
 
 import java.lang.reflect.Method;
@@ -22,7 +23,7 @@ public class Functions {
 
     }
 
-    public static void moveCharacter() {
+    public static void moveCharacter(Character.CharacterName xer) {
 
     }
 

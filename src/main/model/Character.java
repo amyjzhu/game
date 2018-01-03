@@ -5,5 +5,18 @@ package main.model;
  */
 public class Character {
 
+    public enum CharacterName {
+        DANNING,
+        ALEXIA,
+        FELICITY,
+        AMY,
+        WANLIN,
+        DALE,
+        DONNY,
+        ED,
+        WILLIAM
+
+    } // do Character or name?
+
     // include information about each character
 }

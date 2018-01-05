@@ -8,8 +8,7 @@ import org.json.JSONObject;
 
 import java.io.*;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by gijin on 2017-12-06.
@@ -103,6 +102,16 @@ public class DialogueParser {
         return classType.cast(value);
     }
 
+
+    private static void populateArgumentList() {
+        Map<String, String[]> arguments = new HashMap<>();
+        Class functions = Functions.class;
+        for(Method m : functions.getMethods()) {
+            String[] args = (String[]) Arrays.stream(m.getParameterTypes()).map(
+                    Class::toString).toArray();
+            arguments.put(m.getName(), args); //could just leave as class and cast right away with type!
+        }
+    }
 
 
     // maybe I don't want to use GSON because I want to write a custome serializer

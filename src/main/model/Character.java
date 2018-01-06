@@ -19,4 +19,9 @@ public class Character {
     } // do Character or name?
 
     // include information about each character
+
+    private String pathToCharacter;
+    private String displayName;
+
+    private
 }
